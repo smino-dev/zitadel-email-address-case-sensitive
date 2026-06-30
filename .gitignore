@@ -1,0 +1,6 @@
+.env
+.env.auto.tfvars
+/keys/
+/terraform/.terraform/
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
