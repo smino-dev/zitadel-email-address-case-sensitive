@@ -1,7 +1,7 @@
 ## Starting
 ```sh
 # First time only: Adjust .env as needed
-mv .env.example .env
+cp .env.example .env
 
 docker-compose up -d
 
