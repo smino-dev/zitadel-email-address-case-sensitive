@@ -4,16 +4,18 @@
 # Uncomment the `DOCKER_SOCKET_PATH` env var if you use Podman.
 cp .env.example .env
 
-docker-compose up -d
+docker compose up -d
 
 cd terraform
 terraform init
 terraform apply -auto-approve
+# Restart login service; it seems to cache login settings
+docker compose restart zitadel-login
 ```
 
 ## Resetting
 ```sh
-docker-compose down --volumes
+docker compose down --volumes
 rm ./terraform/terraform.tfstate
 ```
 
