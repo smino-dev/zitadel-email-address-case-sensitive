@@ -11,6 +11,12 @@ terraform init
 terraform apply -auto-approve
 ```
 
+## Resetting
+```sh
+docker-compose down --volumes
+rm ./terraform/terraform.tfstate
+```
+
 ## Admin User
 user name: `zitadel-admin@zitadel.localhost`
 password: `Password1!`
